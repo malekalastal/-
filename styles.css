@@ -750,6 +750,32 @@ html {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(10px); }/* الوضع الافتراضي (فاتح) */
+body {
+  background-color: #f9fafb; /* رمادي فاتح */
+  color: #111827;           /* أسود تقريباً */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* الوضع الداكن */
+body.dark-mode {
+  background-color: #111827; /* غامق */
+  color: #f9fafb;           /* فاتح */
+}
+
+/* زر التبديل */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 999;
+}
   to { opacity: 1; transform: translateY(0); }
 }
