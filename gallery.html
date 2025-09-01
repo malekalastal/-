@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - غزة في القلب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-heart"></i>
+                    <span>غزة في القلب</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="gallery.html" class="active">معرض الصور</a></li>
+                    <li><a href="donate.html">تبرع الآن</a></li>
+                    <li><a href="donations.html">قائمة التبرعات</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1 class="hero-title">
+                <i class="fas fa-camera"></i>
+                معرض صور غزة
+            </h1>
+            <p class="hero-subtitle">صور توثق الأحداث والحياة في غزة خلال حرب أكتوبر</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    جميع الصور
+                </button>
+                <button class="filter-btn" data-filter="events">
+                    <i class="fas fa-calendar-alt"></i>
+                    الأحداث
+                </button>
+                <button class="filter-btn" data-filter="heroes">
+                    <i class="fas fa-star"></i>
+                    الأبطال
+                </button>
+                <button class="filter-btn" data-filter="daily-life">
+                    <i class="fas fa-home"></i>
+                    الحياة اليومية
+                </button>
+                <button class="filter-btn" data-filter="solidarity">
+                    <i class="fas fa-hands-helping"></i>
+                    التضامن
+                </button>
+                <button class="filter-btn" data-filter="destruction">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    الدمار
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <div class="container">
+            <div class="photos-grid" id="photosGrid">
+                <!-- Photos will be loaded dynamically -->
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    عرض المزيد من الصور
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Modal -->
+    <div class="photo-modal" id="photoModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+                <div class="modal-nav">
+                    <button class="modal-nav-btn prev" id="modalPrev">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="modal-nav-btn next" id="modalNext">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span id="modalDate"></span>
+                    <span id="modalLocation"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <section class="gallery-stats">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-bar"></i>
+                إحصائيات المعرض
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="stat-number" data-target="1247">0</div>
+                    <div class="stat-label">صورة موثقة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-number" data-target="127">0</div>
+                    <div class="stat-label">يوم من التوثيق</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="89">0</div>
+                    <div class="stat-label">مصور متطوع</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-label">موقع مختلف</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <div class="container">
+            <div class="upload-card">
+                <h3>
+                    <i class="fas fa-upload"></i>
+                    شارك صورك
+                </h3>
+                <p>هل لديك صور توثق الأحداث في غزة؟ شاركها معنا</p>
+                <button class="upload-btn" id="uploadBtn">
+                    <i class="fas fa-camera"></i>
+                    رفع صورة
+                </button>
+                <input type="file" id="photoUpload" accept="image/*" multiple style="display: none;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>غزة في القلب</h3>
+                    <p>موقع توثيقي لأحداث غزة وحرب أكتوبر</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="gallery.html">معرض الصور</a></li>
+                        <li><a href="donate.html">تبرع الآن</a></li>
+                        <li><a href="donations.html">قائمة التبرعات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@gaza-memorial.org</li>
+                        <li><i class="fas fa-phone"></i> +970 123 456 789</li>
+                        <li><i class="fas fa-map-marker-alt"></i> غزة، فلسطين</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 غزة في القلب. جميع الحقوق محفوظة.</p>
+                <p class="palestine-flag">🇵🇸 فلسطين حرة من النهر إلى البحر 🇵🇸</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <script src="gallery-script.js"></script>
+</body>
+</html>
