@@ -71,7 +71,10 @@ function handleSupportAction(action, button) {
         
         switch(action) {
             case 'تبرع الآن':
-                showNotification('شكراً لك! تم توجيهك لصفحة التبرع', 'success');
+                showNotification('جاري توجيهك لصفحة التبرع...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'donate.html';
+                }, 1000);
                 break;
             case 'شارك':
                 shareContent();
@@ -80,7 +83,7 @@ function handleSupportAction(action, button) {
                 showNotification('تم تسجيلك في قائمة المناصرين', 'success');
                 break;
         }
-    }, 2000);
+    }, 1000);
 }
 
 function shareContent() {
