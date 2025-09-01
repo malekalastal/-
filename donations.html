@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة التبرعات - غزة في القلب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="donations-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><i class="fas fa-heart"></i> غزة في القلب</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#timeline">الأحداث</a></li>
+                        <li><a href="index.html#heroes">الشهداء</a></li>
+                        <li><a href="index.html#stories">القصص</a></li>
+                        <li><a href="donate.html">التبرع</a></li>
+                        <li><a href="donations.html" class="active">قائمة التبرعات</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Donations Hero Section -->
+    <section class="donations-hero">
+        <div class="container">
+            <div class="donations-hero-content">
+                <h1>قائمة المتبرعين الكرام</h1>
+                <p>شكراً لكل من ساهم في دعم إخواننا في غزة</p>
+                <div class="total-donations">
+                    <div class="total-amount">
+                        <span class="amount" id="totalAmount">2,847,650</span>
+                        <span class="currency">ريال سعودي</span>
+                    </div>
+                    <div class="total-donors">
+                        <span class="count" id="totalDonors">1,247</span>
+                        <span class="label">متبرع كريم</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donations Statistics -->
+    <section class="donations-stats">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-pie"></i>
+                إحصائيات التبرعات
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-medkit"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">850,000</div>
+                        <div class="stat-label">ريال للمساعدات الطبية</div>
+                        <div class="stat-percentage">30%</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">710,000</div>
+                        <div class="stat-label">ريال للطعام والماء</div>
+                        <div class="stat-percentage">25%</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">568,000</div>
+                        <div class="stat-label">ريال للمأوى</div>
+                        <div class="stat-percentage">20%</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">284,000</div>
+                        <div class="stat-label">ريال للتعليم</div>
+                        <div class="stat-percentage">10%</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">435,650</div>
+                        <div class="stat-label">ريال دعم عام</div>
+                        <div class="stat-percentage">15%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Donors -->
+    <section class="top-donors">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-trophy"></i>
+                أكبر المتبرعين
+            </h2>
+            <div class="donors-grid">
+                <div class="donor-card gold">
+                    <div class="donor-rank">
+                        <i class="fas fa-crown"></i>
+                        <span>1</span>
+                    </div>
+                    <div class="donor-info">
+                        <h3>محمد عبدالله الأحمد</h3>
+                        <div class="donor-amount">250,000 ريال</div>
+                        <div class="donor-type">دعم عام + طبي</div>
+                        <div class="donor-date">منذ 5 أيام</div>
+                    </div>
+                </div>
+                <div class="donor-card silver">
+                    <div class="donor-rank">
+                        <i class="fas fa-medal"></i>
+                        <span>2</span>
+                    </div>
+                    <div class="donor-info">
+                        <h3>فاطمة محمد السعيد</h3>
+                        <div class="donor-amount">180,000 ريال</div>
+                        <div class="donor-type">مساعدات طبية</div>
+                        <div class="donor-date">منذ 3 أيام</div>
+                    </div>
+                </div>
+                <div class="donor-card bronze">
+                    <div class="donor-rank">
+                        <i class="fas fa-award"></i>
+                        <span>3</span>
+                    </div>
+                    <div class="donor-info">
+                        <h3>أحمد علي الخالدي</h3>
+                        <div class="donor-amount">150,000 ريال</div>
+                        <div class="donor-type">طعام ومأوى</div>
+                        <div class="donor-date">منذ أسبوع</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Donations -->
+    <section class="recent-donations">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-clock"></i>
+                آخر التبرعات
+            </h2>
+            <div class="donations-list" id="donationsList">
+                <!-- Donations will be loaded here by JavaScript -->
+            </div>
+            <div class="load-more">
+                <button class="load-more-btn" onclick="loadMoreDonations()">
+                    <i class="fas fa-plus"></i>
+                    عرض المزيد
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Donors -->
+    <section class="monthly-donors">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-calendar-check"></i>
+                المتبرعون الشهريون
+            </h2>
+            <div class="monthly-info">
+                <p>شكراً للمتبرعين الذين اختاروا التبرع الشهري لضمان الدعم المستمر</p>
+                <div class="monthly-stats">
+                    <div class="monthly-stat">
+                        <span class="number">347</span>
+                        <span class="label">متبرع شهري</span>
+                    </div>
+                    <div class="monthly-stat">
+                        <span class="number">125,000</span>
+                        <span class="label">ريال شهرياً</span>
+                    </div>
+                </div>
+            </div>
+            <div class="monthly-donors-list">
+                <div class="monthly-donor">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <h4>سارة أحمد</h4>
+                        <span>500 ريال شهرياً</span>
+                        <small>منذ 6 أشهر</small>
+                    </div>
+                </div>
+                <div class="monthly-donor">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <h4>خالد محمد</h4>
+                        <span>300 ريال شهرياً</span>
+                        <small>منذ 4 أشهر</small>
+                    </div>
+                </div>
+                <div class="monthly-donor">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <h4>نور الهدى</h4>
+                        <span>200 ريال شهرياً</span>
+                        <small>منذ 8 أشهر</small>
+                    </div>
+                </div>
+                <div class="monthly-donor">
+                    <div class="donor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="donor-details">
+                        <h4>عبدالرحمن علي</h4>
+                        <span>1000 ريال شهرياً</span>
+                        <small>منذ سنة</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="transparency-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-eye"></i>
+                الشفافية في استخدام التبرعات
+            </h2>
+            <div class="transparency-content">
+                <div class="transparency-text">
+                    <h3>التزامنا بالشفافية</h3>
+                    <p>نؤمن بأهمية الشفافية الكاملة في استخدام تبرعاتكم. كل ريال يصل إلى مستحقيه.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> تقارير شهرية مفصلة</li>
+                        <li><i class="fas fa-check"></i> صور وفيديوهات من الميدان</li>
+                        <li><i class="fas fa-check"></i> إيصالات وفواتير موثقة</li>
+                        <li><i class="fas fa-check"></i> تدقيق مالي مستقل</li>
+                    </ul>
+                </div>
+                <div class="transparency-chart">
+                    <div class="chart-container">
+                        <canvas id="donationsChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>كن جزءاً من الحل</h2>
+                <p>انضم إلى قائمة المتبرعين الكرام وساهم في دعم إخواننا في غزة</p>
+                <a href="donate.html" class="cta-btn">
+                    <i class="fas fa-heart"></i>
+                    تبرع الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>غزة في القلب</h3>
+                    <p>موقع تذكاري لتوثيق أحداث حرب غزة وتكريم الشهداء</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="donate.html">التبرع</a></li>
+                        <li><a href="donations.html">قائمة التبرعات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> donations@gaza-memorial.org</li>
+                        <li><i class="fas fa-phone"></i> +970-XXX-XXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> فلسطين - غزة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 غزة في القلب - جميع الحقوق محفوظة</p>
+                <p class="dedication">مهداة لأرواح شهداء فلسطين الأبرار</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="donations-script.js"></script>
+</body>
+</html>
