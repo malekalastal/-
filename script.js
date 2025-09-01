@@ -15,7 +15,50 @@ function initializePage() {
     setupNavigation();
     
     // Set up button handlers
-    setupButtonHandlers();
+    setupButtonHandlers();// إعدادات عامة
+const REDIRECT_DELAY = 1500; // 1.5 ثانية - تقدر تغير الرقم بسهولة
+const messages = {
+  donatePending: "⏳ جاري توجيهك لصفحة التبرع...",
+  donateThankYou: "✅ شكراً لك على دعمك!",
+  sharePending: "📢 جاري تجهيز رابط المشاركة...",
+  shareDone: "✅ تم نسخ رابط الموقع! شاركه الآن 💙"
+};
+
+// دالة عامة لإظهار الإشعارات
+function showNotification(message, type = "info") {
+  const notification = document.createElement("div");
+  notification.className = `notification ${type}`;
+  notification.innerHTML = `
+    <span>${message}</span>
+    <span class="loader"></span>
+  `;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.remove();
+  }, REDIRECT_DELAY + 1000);
+}
+
+// حدث التبرع
+document.getElementById("donateBtn")?.addEventListener("click", () => {
+  showNotification(messages.donatePending, "success");
+
+  setTimeout(() => {
+    window.location.href = "donate.html";
+  }, REDIRECT_DELAY);
+});
+
+// حدث المشاركة
+document.getElementById("shareBtn")?.addEventListener("click", () => {
+  showNotification(messages.sharePending, "info");
+
+  setTimeout(() => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      showNotification(messages.shareDone, "success");
+    });
+  }, REDIRECT_DELAY);
+});
+
     
     // Add smooth scrolling
     setupSmoothScrolling();
