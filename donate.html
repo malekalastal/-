@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تبرع لدعم غزة - غزة في القلب</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="donate-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><i class="fas fa-heart"></i> غزة في القلب</h1>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#timeline">الأحداث</a></li>
+                        <li><a href="index.html#heroes">الشهداء</a></li>
+                        <li><a href="index.html#stories">القصص</a></li>
+                        <li><a href="donate.html" class="active">التبرع</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Donate Hero Section -->
+    <section class="donate-hero">
+        <div class="container">
+            <div class="donate-hero-content">
+                <h1>ادعم غزة والشعب الفلسطيني</h1>
+                <p>كن جزءاً من الحل وساهم في دعم الأسر المتضررة في غزة</p>
+                <div class="urgency-indicator">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>الحاجة ماسة وعاجلة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="donation-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="donation-info">
+                    <h2>لماذا نحتاج تبرعك؟</h2>
+                    <div class="need-items">
+                        <div class="need-item">
+                            <i class="fas fa-medkit"></i>
+                            <div>
+                                <h3>المساعدات الطبية</h3>
+                                <p>أدوية ومعدات طبية للمستشفيات المدمرة</p>
+                            </div>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-bread-slice"></i>
+                            <div>
+                                <h3>الطعام والماء</h3>
+                                <p>توفير الاحتياجات الأساسية للأسر النازحة</p>
+                            </div>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <h3>المأوى</h3>
+                                <p>إعادة إعمار المنازل المدمرة</p>
+                            </div>
+                        </div>
+                        <div class="need-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h3>التعليم</h3>
+                                <p>دعم الأطفال لمواصلة تعليمهم</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donation-form">
+                    <h2>نموذج التبرع</h2>
+                    <form id="donationForm">
+                        <!-- Amount Selection -->
+                        <div class="form-group">
+                            <label>اختر مبلغ التبرع</label>
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn" data-amount="50">50 ريال</button>
+                                <button type="button" class="amount-btn" data-amount="100">100 ريال</button>
+                                <button type="button" class="amount-btn" data-amount="250">250 ريال</button>
+                                <button type="button" class="amount-btn" data-amount="500">500 ريال</button>
+                                <button type="button" class="amount-btn" data-amount="1000">1000 ريال</button>
+                            </div>
+                            <div class="custom-amount">
+                                <input type="number" id="customAmount" placeholder="أدخل مبلغ آخر" min="10">
+                                <span>ريال سعودي</span>
+                            </div>
+                        </div>
+
+                        <!-- Donation Type -->
+                        <div class="form-group">
+                            <label>نوع التبرع</label>
+                            <div class="donation-types">
+                                <label class="radio-option">
+                                    <input type="radio" name="donationType" value="general" checked>
+                                    <span class="radio-custom"></span>
+                                    دعم عام لغزة
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="donationType" value="medical">
+                                    <span class="radio-custom"></span>
+                                    المساعدات الطبية
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="donationType" value="food">
+                                    <span class="radio-custom"></span>
+                                    الطعام والماء
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="donationType" value="shelter">
+                                    <span class="radio-custom"></span>
+                                    المأوى والإسكان
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="donationType" value="education">
+                                    <span class="radio-custom"></span>
+                                    التعليم للأطفال
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="form-group">
+                            <label for="donorName">الاسم الكامل</label>
+                            <input type="text" id="donorName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="donorEmail">البريد الإلكتروني</label>
+                            <input type="email" id="donorEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="donorPhone">رقم الهاتف</label>
+                            <input type="tel" id="donorPhone" required>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-group">
+                            <label>طريقة الدفع</label>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="card" checked>
+                                    <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
+                                    بطاقة ائتمان
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="paypal">
+                                    <span class="payment-icon"><i class="fab fa-paypal"></i></span>
+                                    PayPal
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="bank">
+                                    <span class="payment-icon"><i class="fas fa-university"></i></span>
+                                    تحويل بنكي
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Anonymous Donation -->
+                        <div class="form-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="anonymous">
+                                <span class="checkbox-custom"></span>
+                                تبرع مجهول (لن يظهر اسمك في قائمة المتبرعين)
+                            </label>
+                        </div>
+
+                        <!-- Monthly Donation -->
+                        <div class="form-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" id="monthly">
+                                <span class="checkbox-custom"></span>
+                                تبرع شهري (سيتم خصم المبلغ شهرياً)
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="donate-submit-btn">
+                            <i class="fas fa-heart"></i>
+                            تبرع الآن
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-line"></i>
+                أثر تبرعاتكم
+            </h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">15,000</div>
+                    <div class="impact-label">أسرة تم دعمها</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">50</div>
+                    <div class="impact-label">مستشفى تم تجهيزه</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">200,000</div>
+                    <div class="impact-label">وجبة طعام تم توزيعها</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">1,000</div>
+                    <div class="impact-label">طفل عاد للمدرسة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">شهادات المتبرعين</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"فخور بأن أكون جزءاً من دعم إخواننا في غزة. كل ريال يصل لمن يستحقه."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>أحمد محمد</strong>
+                        <span>متبرع من السعودية</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"التبرع الشهري سهل ومريح، وأشعر بالراحة لأنني أساعد باستمرار."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>فاطمة علي</strong>
+                        <span>متبرعة من الإمارات</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"شفافية كاملة في استخدام التبرعات، أثق في وصولها للمحتاجين."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>محمد حسن</strong>
+                        <span>متبرع من مصر</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>غزة في القلب</h3>
+                    <p>موقع تذكاري لتوثيق أحداث حرب غزة وتكريم الشهداء</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#timeline">الأحداث</a></li>
+                        <li><a href="index.html#heroes">الشهداء</a></li>
+                        <li><a href="donate.html">التبرع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> donations@gaza-memorial.org</li>
+                        <li><i class="fas fa-phone"></i> +970-XXX-XXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> فلسطين - غزة</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 غزة في القلب - جميع الحقوق محفوظة</p>
+                <p class="dedication">مهداة لأرواح شهداء فلسطين الأبرار</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="donate-script.js"></script>
+</body>
+</html>
